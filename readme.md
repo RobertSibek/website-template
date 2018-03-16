@@ -1,5 +1,3 @@
-Website template for future projects.
-
-Created using Vue, Bootstrap, SASS, JS.
+Website template for future projects including Vue, Bootstrap, SASS, JS.
 
 Free to user, so enjoy.
