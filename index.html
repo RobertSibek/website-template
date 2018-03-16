@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+
+<head>
+ 	<title>Welcome to {{title}} Website</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="Free Website Template">
+  <meta name="keywords" content="HTML,CSS,Vue.Js,JavaScript,Bootstrap">
+  <meta name="author" content="Robert Sibek">	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.15/dist/vue.js">
+	</script>
+	<script src="scripts/base.js"></script>
+	<link rel="stylesheet" href="styles/css/base.css">
+</head>
+
+<body>
+
+	<div class="container-fullwidth">
+		<div id="app">
+			<nav class="navbar navbar-expand-lg navbar-light">
+				<a class="navbar-brand" href="#">
+				<img src="images/template_logo.png" alt="your logo here">
+				</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav">
+					
+						<li class="nav-item">
+							<a class="nav-link" href="#">{{ navbar.home}}</a>
+						</li>
+					
+						<li class="nav-item active">
+							<a class="nav-link" href="#">{{ navbar.about}} <span class="sr-only">(current)</span></a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">{{ navbar.gallery }}</a>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          {{ navbar.submenu.title }}
+        </a>
+							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+								<a class="dropdown-item" href="#" v-for="item in navbar.submenu.items">{{ item.item}}</a>
+							</div>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="javascript:greetings();">{{ navbar.contact }}</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+	</div>
+
+	<script>
+		var app = new Vue({
+			el: '#app',
+			data: {
+				title: "Custom",
+				logo: "images/your_logo.png",
+				navbar: {
+					"home": "Home",
+					"about": "About Us",
+					"menu": "Gallery",			
+					"contact": "Contact",
+					"submenu": { 
+						"title": "Custom Submenu",
+						"items": [
+						{ item: "Submenu 1" },
+						{ item: "Submenu 2" },
+						{ item: "Submenu 3" }
+					]
+					}
+				}
+			}
+
+
+
+		})
+	</script>
+
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+</body>
+</html>
